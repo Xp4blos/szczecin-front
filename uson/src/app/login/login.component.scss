@@ -1,0 +1,123 @@
+.wrapper{
+    
+    width: 100%;
+    height: 100%;
+    .blop1{
+        position: absolute;
+        width: 50%;
+        top: -30%;
+        left: -20%;
+        z-index: -1;
+        transform: rotate(-20deg);
+    }
+    .blop2{
+        position: absolute;
+        width: 50%;
+        right: -30%;
+        bottom: -66%;
+    }
+    .content{
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        margin-top: 40px;
+        margin-left: -400px;        
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        .left{
+           
+            padding: 15px;
+            .head{
+                text-align: center;
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: black;
+                }
+                .img-head{
+                    width: 200px;
+                    margin: 20px;
+                }
+                h1{
+                    padding: 20px;
+                    font-size: 20px;
+                    font-style: italic;
+                    // color: #ff6600;
+                }
+            }
+            h2{
+                text-align: left;
+                font-size: 14px;
+            }
+            form{
+                margin-top: 25px;
+                .form-group{
+                    margin: 10px;
+                    h2{
+                        margin-bottom: 15px;
+                    }
+                    button{
+                        width: 100%;
+                    }
+                    .register{
+                        text-align: center;
+                        display: flex;
+                        font-size: 14px;
+                        padding: 10px;
+                        a{
+                            color: #ff6600;
+                            font-weight: bold;
+                            margin-left: 5px;
+                        }
+                    }
+                    .btn-u-login{
+                        margin-top: 20px;
+                        background: rgb(255,102,0);
+                        background: linear-gradient(90deg, rgba(255,102,0,1) 0%, rgba(255,192,0,1) 100%);
+                        color: white;
+                        font-weight: bold;
+                    }
+                    .btn-u-login:hover{
+                        margin-top: 20px;
+                        background: rgb(255,102,0);
+                        background: linear-gradient(90deg, rgba(255,102,0,1) 100%, rgba(255,192,0,1) 0%);
+                        color: white;
+                        font-weight: bold;
+                    }
+                  
+                }
+            }
+            .login-auth{
+                a{
+                    display: block;
+                }
+            }
+        }
+        .right{
+            position: relative;
+            img.right-banner{
+                width: 400px;   
+            }
+            div.right-content{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: #ff660077;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.857);
+                padding-top: 50%;
+                h3{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    font-size: 40px;
+                }
+                p{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
