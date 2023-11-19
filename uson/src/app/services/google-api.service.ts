@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {OAuthService, AuthConfig} from 'angular-oauth2-oidc';
+import { UserService } from './user.service';
 
 const oAuthConfig: AuthConfig = {
   issuer: 'https://accounts.google.com',
@@ -14,19 +15,23 @@ const oAuthConfig: AuthConfig = {
   providedIn: 'root'
 })
 export class GoogleApiService {
+  
 
-  constructor(private readonly oAuthService: OAuthService) {
-    oAuthService.configure(oAuthConfig)
-    oAuthService.loadDiscoveryDocument().then( ()=>{
-      oAuthService.tryLoginImplicitFlow().then( ()=>{
-        if(!oAuthService.hasValidAccessToken()){
-          oAuthService.initLoginFlow()
-        } else {
-          oAuthService.loadUserProfile().then( (profile)=>{
-            console.log(JSON.stringify(profile))
-          })
-        }
-      })
+  constructor(private readonly oAuthService: OAuthService, private user:UserService) {
+    console.log('google api')
+   oAuthService.configure(oAuthConfig)
+   oAuthService.loadDiscoveryDocument().then(()=>{
+    oAuthService.tryLoginImplicitFlow().then(() =>{
+      if(!oAuthService.hasValidAccessToken()){
+        oAuthService.initLoginFlow()
+      }
+      else{
+        oAuthService.loadUserProfile().then(profile =>{
+          console.log(JSON.stringify(profile))
+
+        })
+      }
     })
+   })
    }
 }

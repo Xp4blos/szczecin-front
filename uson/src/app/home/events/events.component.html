@@ -1,0 +1,6 @@
+<div class="events">
+    <h4>Nadchodzące Wydarzenia</h4>
+    <div class="events-list">
+        <app-event-element *ngFor="let event of eventsService.events" [eventInput]="event"></app-event-element>
+    </div>
+</div>

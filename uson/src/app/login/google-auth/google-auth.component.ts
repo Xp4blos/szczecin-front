@@ -11,7 +11,7 @@ import { GoogleApiService } from '../../services/google-api.service';
 export class GoogleAuthComponent implements OnInit {
 
 
-constructor(private readonly googleApiService: GoogleApiService){}
+constructor(private googleApiService: GoogleApiService){}
 
 ngOnInit(): void {
   

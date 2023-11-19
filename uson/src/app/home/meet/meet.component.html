@@ -1,0 +1,16 @@
+<section class="chat rounded">
+    <button class="btn btn-info" (click)="addFriend($event)">
+        Dodaj do znajomych
+    </button>
+    <div class="chat-window" id="style-2">
+     <p *ngFor="let message of meet.activeChatMessages" [ngClass]="{mess : user.ActiveUseremail == message.userId}">{{message.content}}</p>
+    </div>
+    <div class="chat-bottom">
+        <form #sendForm="ngForm" (ngSubmit)="onSend(sendForm)">
+            <div class="form-group">
+                <input class="form-control" type="text" name="messageField" ngModel>
+                <button class="btn" type="submit"><img src="./assets/icons/send.png" alt="" ngModel></button>
+            </div>
+        </form>
+    </div>
+</section> 

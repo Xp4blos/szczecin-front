@@ -1,0 +1,51 @@
+section.chat{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    height: 400px;
+    width: 550px;
+    background-color: rgb(255, 255, 255);
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    .options{
+        text-align: right;
+      button{
+        font-weight: bold;
+        color: white;
+        padding: 3px 10px;
+        background-color: rgba(245, 222, 179, 0);
+        border: none;
+      }
+        
+    }
+    .content{
+        background-color: white;
+        height: 100%;
+        .chat-friends{
+            width: 35%;
+            height: 100%;
+            padding: 5px;
+            border-right: rgb(203, 203, 203) solid 1px;
+            .friend{
+                display: flex;
+                margin: 3px;
+                padding: 5px;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgb(245, 245, 245);
+                font-size: 14px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+                
+                   
+                
+            }
+        }
+        
+    }
+   
+}

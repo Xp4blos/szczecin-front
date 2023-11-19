@@ -1,0 +1,19 @@
+<section class="chat rounded shadow">
+    <div class="options">
+        <button (click)="closeChat()">X</button>
+    </div>
+    <div class="content">
+        <div class="chat-friends">
+            <div class="friend rounded" *ngFor="let friend of user.friends">
+            <img src="{{img.random()}}" alt=""> 
+            {{friend.name}}
+            {{friend.lastName}}
+            </div>
+            </div>
+            <div class="chat-conversation">
+                <div class="conversation-header">
+            
+                </div>
+            </div>
+        </div>
+</section>

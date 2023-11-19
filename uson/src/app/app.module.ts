@@ -8,14 +8,20 @@ import { TestComponent } from './comp/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
-
-import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
-import {
-  GoogleLoginProvider,
-  FacebookLoginProvider
-} from '@abacritt/angularx-social-login';
 import { GoogleAuthComponent } from './login/google-auth/google-auth.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { GroupsComponent } from './home/groups/groups.component';
+import { EventsComponent } from './home/events/events.component';
+import { ProfileComponent } from './home/profile/profile.component';
+import { HappeningComponent } from './home/happening/happening.component';
+import { NavigationComponent } from './home/navigation/navigation.component';
+import { EventElementComponent } from './home/events/event-element/event-element.component';
+import { HomepageComponent } from './home/homepage/homepage.component';
+import { FriendElementComponent } from './home/homepage/friend-element/friend-element.component';
+import { MeetComponent } from './home/meet/meet.component';
+import { ChatComponent } from './chat/chat.component';
+import { MessageDirective } from './message.directive';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,12 +32,24 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     LoginComponent,
     HeaderComponent,
     GoogleAuthComponent,
+    GroupsComponent,
+    EventsComponent,
+    ProfileComponent,
+    HappeningComponent,
+    NavigationComponent,
+    EventElementComponent,
+    HomepageComponent,
+    FriendElementComponent,
+    MeetComponent,
+    ChatComponent,
+    MessageDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,  
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

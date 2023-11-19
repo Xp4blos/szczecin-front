@@ -1,0 +1,27 @@
+div.event-element{
+    margin: 10px;
+    .bg{
+        position: relative;
+        border-radius: 10px;
+        img{
+            height: 350px;
+            width: 250px;
+            object-fit:cover;
+            border-radius: 10px;
+        }
+        .content{
+            background-color: rgba(255, 102, 0, 0.897);
+            color: white;
+            padding: 10px;
+            position: absolute;
+            width: 250px;
+            height: 40%;
+            bottom:0;
+            text-align: right;
+            border-radius: 0 0  10px 10px;
+        }
+        
+    }
+   
+
+}

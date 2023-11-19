@@ -15,13 +15,14 @@
                     <h2>Zaloguj</h2>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" placeholder="Login" type="text">
+                    <input class="form-control" placeholder="Login" type="text" name="login" ngModel required>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" placeholder="Hasło" type="password" name="" id="">
+                    <input class="form-control" placeholder="Hasło" type="password" 
+                    name="password">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-u-login" type="submit">Zaloguj</button>
+                    <button class="btn btn-u-login" (click)="goToHome()" >Zaloguj</button>
                     <div class="register">
                         <p>Nie posiadasz jeszcze konta?</p>
                         <a href="">Zarejstruj się tutaj</a>
@@ -30,8 +31,14 @@
             </form>
             <div class="login-auth">
                 <hr>
-                <a href="">fb-login</a>
-                <a href="">google-login</a>
+                <a routerLink="/google" class="login-card shadow rounded">
+                    <img class="login-icon" src="./assets/icons/google.png" alt="">
+                    Zaloguj za pomocą Google
+                </a>
+                <a href="#" class="login-card shadow rounded">
+                    <img class="login-icon" src="./assets/icons/facebook.png" alt="">
+                    Zaloguj za pomocą Facebook
+                </a>
             </div>
           
         </div>

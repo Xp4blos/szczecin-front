@@ -1,0 +1,98 @@
+div.wrapper{
+  z-index: -1;
+    background-image: url(../../assets/bg/bg1.jpeg);
+    background-size: 100%;
+    height: 100vh;
+    .content{
+        margin: 0 auto;
+        padding-top: 30px;
+        display: flex;
+        width: 90%;
+        .content-left{
+           width: 22%;
+           background-color: white;
+           height: 100px;
+           .hello{
+               height: 100px;
+               margin: 5px;
+               text-align: center;
+               background-color: white;
+               h3{
+                   line-height: 70px;
+               }
+           }
+           .nav{
+            margin: 5px;
+           }
+        }
+        .content-right{
+          
+            width: 78%;
+            .right-upper{
+                display: flex;
+                align-items: center;
+                .search-bar{
+                    margin: 5px;
+                    padding: 10px;
+                    background-color: white;
+                    width: 80%;
+                    .btn-group{
+                        margin: 0 auto;
+                        height: 40px;
+                        width: 100%;
+                    input{
+                        width: 100%;
+                        padding: 5px;
+                        border: 1px solid rgb(184, 184, 184);
+                        border-radius: 10px 0 0 10px;
+                    }
+                    button{
+                        border: 1px solid rgb(184, 184, 184);
+                        background-color:rgb(227, 227, 227) ;
+                        border-radius: 0 10px 10px 0;
+                        padding: 5px 10px;
+                        img{
+                            width: 25px;
+                        }
+                    }
+                }
+                }
+                .home-profile{
+                    margin: 5px;
+                    width: 20%;
+                    height: 100px;
+                    background: rgb(255,102,0);
+                    background: linear-gradient(90deg, rgba(255,102,0,1) 20%, rgba(255,192,0,1) 100%);
+                    text-align: center;
+                    padding: 5px;
+                    img{
+                        margin: 5px;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        border: light solid 1px;
+                    }
+                    p
+                    {
+                        color: white;
+                        font-size: 12px;
+                        font-weight: bold;
+                        padding: 5px;
+                    }
+                }
+            }
+            .right-content{
+              margin: 5px;
+              min-height: 300px;  
+              background-color: white;
+            }
+        }
+    }
+}
+.chat-ico{
+    position: absolute;
+    bottom: 25px;
+    right: 35px;
+    width: 50px;
+    cursor: pointer;
+}

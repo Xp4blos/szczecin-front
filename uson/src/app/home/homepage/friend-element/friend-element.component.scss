@@ -1,0 +1,24 @@
+div.friend-card{
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0.249);
+    border-radius: 25px;
+    padding: 15px;
+    margin: 5px;
+    a{
+        padding: 5px;
+        text-decoration: none;
+        
+        img{
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border-radius: 40px;
+        }
+        p{
+            padding: 5px;
+            color: black;
+        }
+    }
+}

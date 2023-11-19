@@ -1,0 +1,27 @@
+<section class="groups rounded">
+    <div class="groups-header rounded">
+        Zaproszenia do znajomych
+    </div>
+    <div class="content">
+        <div class="left">
+            <h5>Wychodzące</h5>
+            <div class="invitations rounded shadow" *ngFor="let friend of friendsInvitation">
+                {{friend.name}}
+                {{friend.lastName}}
+                <button  class="btn btn-danger">X</button>
+            </div>
+        </div>
+        <div class="right">
+            <h5>Przychodzące</h5>   
+            <div class="requests rounded shadow" *ngFor="let friend of friendsRequests; let i = index">
+                {{friend.name}}
+                {{friend.lastName}}
+                <div class="button-group">
+                    <button class="btn btn-success">Akceptuj</button>
+                    <button class="btn btn-danger">Odrzóć</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>

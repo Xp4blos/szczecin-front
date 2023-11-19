@@ -1,1 +1,32 @@
-<h1>USRON</h1>
+<div class="wrapper">
+    <div class="content">
+        <div class="content-left">
+            <div class="hello shadow rounded">
+                <h3>Witaj {{activeUser.name}}</h3>
+            </div>
+            <app-navigation class="nav"></app-navigation>
+        </div>
+            <div class="content-right">
+                <div class="right-upper">
+                    <div class="search-bar shadow  rounded ">
+                        <div class="btn-group">
+                            <input placeholder="Szukaj..." type="text"><button><img src="./assets/icons/search-orange.png" alt=""></button>
+                        </div>
+                        
+                    </div>
+                    <div class="home-profile shadow rounded">
+                        <img src="{{activeUser.photo}}" alt="">
+                        <p>{{fullName}}</p>
+            
+                    </div>
+                </div>
+                <div class="right-content rounded shadow">
+                    <router-outlet></router-outlet>
+                </div>
+                
+            </div>
+    </div>
+</div>
+<img (click)="chatOpener($event)" *ngIf="!isChat" src="./assets/icons/chat.png" alt="" class="chat-ico">
+<app-chat (chatOutput)="chatClose($event)" *ngIf="isChat"></app-chat>
+
